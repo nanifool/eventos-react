@@ -1,31 +1,34 @@
-import {useState} from 'react'
-import Listagem from './Listagem'
+import {React, useState} from 'react'
+import Mensagem from './Mensagem'
+import Tick from './Tick'
 import './App.css'
 
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [likes, aumentaLikes] = useState(0)
+  // const [count, setCount] = useState(0)
   let banana = 0
   const somaClicks = function (){
-    setCount(count+1)
+    aumentaLikes(likes+1)
     banana = banana+1
-    console.log({count, banana})
+    console.log({likes, banana})
   }
-  const subtraiClicks = function() {
-    setCount(count-1)
-    console.log(count)
+  const subtraiLikes = function() {
+    aumentaLikes(likes-1)
+    console.log(likes)
   }
 
   return (
     <div className="App">
-      {count}/{banana} <br />
+      {likes}/{banana} <br />
       <button onClick={somaClicks} >
-        Soma 1
+        Soma
       </button>
-      <button onClick={subtraiClicks} >
-        Diminui 1
+      <button onClick={subtraiLikes} >
+        Diminui
       </button>
-      <Listagem />
+      <Mensagem />
+      <Tick />
     </div>
   )
 }
