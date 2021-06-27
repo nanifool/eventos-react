@@ -3,7 +3,7 @@ import { useState } from "react";
 function Clock ({ date }) {
   return (
     <div className="App">
-      Is it {date}.
+      Bom estudo! Hojé é: {date}.
     </div>
   );
 }

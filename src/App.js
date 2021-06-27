@@ -8,11 +8,13 @@ function App() {
   const [likes, aumentaLikes] = useState(0)
   // const [count, setCount] = useState(0)
   let banana = 0
-  const somaClicks = function (){
+
+  function somaClicks (){
     aumentaLikes(likes+1)
     banana = banana+1
     console.log({likes, banana})
   }
+  
   const subtraiLikes = function() {
     aumentaLikes(likes-1)
     console.log(likes)
