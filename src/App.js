@@ -5,32 +5,29 @@ import './App.css'
 
 
 function App() {
-  const [likes, aumentaLikes] = useState(0)
-  // const [count, setCount] = useState(0)
-  let banana = 0
+  const [likes, contaLikes] = useState(0)
 
-  function somaClicks (){
-    aumentaLikes(likes+1)
-    banana = banana+1
-    console.log({likes, banana})
+  function somaLikes (){
+    contaLikes(likes+1)
+    console.log(likes)
   }
   
   const subtraiLikes = function() {
-    aumentaLikes(likes-1)
+    contaLikes(likes-1)
     console.log(likes)
   }
 
   return (
     <div className="App">
-      {likes}/{banana} <br />
-      <button onClick={somaClicks} >
+      {likes} <br />
+      <button onClick={somaLikes} >
         Soma
       </button>
       <button onClick={subtraiLikes} >
         Diminui
       </button>
-      <Mensagem />
-      <Tick />
+        <Mensagem />
+        <Tick />
     </div>
   )
 }

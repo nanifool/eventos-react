@@ -1,26 +1,26 @@
-import { useState } from "react";
+ import { useState } from "react";
 
-function Clock ({ date }) {
-  return (
-    <div className="App">
-      Bom estudo! Hojé é: {date}.
-    </div>
-  );
-}
+   function Tempo ({ data }) {
+      return (
+        <div className="App">
+          A data atual é: {data}.
+        </div>
+      );
+    }
 
-function Tick() {
-  let [relogio, setRelogio] = useState()
+   function Tick() {
+      let [relogio, setRelogio] = useState()
 
-  setInterval(() => {
-    let time = new Date()
-    setRelogio(time.toLocaleString())
-  }, 1000)
+      setInterval(() => {
+        let time = new Date()
+         setRelogio(time.toLocaleString())
+      }, 1000)
 
-  return (
-    <div className="App">
-       <Clock date={relogio} />
-    </div>
-  );
-}
+      return (
+        <div className="App">
+           <Tempo data={relogio} />
+        </div>
+      );
+    }
 
-export default Tick;
+    export default Tick;

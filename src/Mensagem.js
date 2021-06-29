@@ -6,9 +6,8 @@ function Mensagem() {
 
   return (
    <div>
-     <input type="text" placeholder="Digite aqui" onChange={(evento) => atualizaNome(evento.target.value)} />
-      {/* não usar arrow function */}
-     <p>Olá, conta_usuário / {nome}! Boas compras!</p>
+     <input type="text" placeholder="Digite aqui seu nome" onChange={(evento) => atualizaNome(evento.target.value)} />
+     <p>Olá, {nome}! Boas compras!</p>
    </div>
   )
 }
