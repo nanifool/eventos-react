@@ -21,10 +21,10 @@ function App() {
     <div className="App">
       {likes} <br />
       <button onClick={somaLikes} >
-        Soma
+        Somar
       </button>
       <button onClick={subtraiLikes} >
-        Diminui
+        Diminuir
       </button>
         <Mensagem />
         <Tick />
